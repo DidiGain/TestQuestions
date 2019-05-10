@@ -60,10 +60,10 @@
 		8086CD4422846301004A9692 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8086CD452284631A004A9692 /* YogaType.swift */,
 				8086CD49228468F2004A9692 /* Answer.swift */,
 				8086CD4D228469B1004A9692 /* Question.swift */,
 				8086CD4F228469F2004A9692 /* ResponseType.swift */,
+				8086CD452284631A004A9692 /* YogaType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -13,7 +13,7 @@ struct Question {
 }
 
 extension Question {
-    func loadData() -> [Question] {
+    static func loadData() -> [Question] {
         return [
             Question(text: "What is your level of experience with yoga?",
                      type: .single,

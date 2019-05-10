@@ -13,14 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var mainButton: UIButton!
     
+    var question = Question.loadData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Start", style: .plain, target: nil, action: nil)
         
         mainButton.layer.cornerRadius = 10
-        
-       
+    
     }
 
 
