@@ -9,6 +9,12 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    
+    @IBOutlet weak var yogaLabel: UILabel!
+    @IBOutlet weak var yogaDescription: UILabel!
+    @IBOutlet weak var stylesLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

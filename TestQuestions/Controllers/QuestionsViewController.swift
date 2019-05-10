@@ -10,6 +10,15 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
+    
+    var questions: [Question]!
+    var questionIndex = 0
+    var answerChecked: [Answer] = []
+    
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
