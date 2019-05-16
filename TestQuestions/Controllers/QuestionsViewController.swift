@@ -149,6 +149,11 @@ extension QuestionsViewController {
             
             multipleStackView.isHidden = false
             
+            for multiSwitch in multiSwitches {
+                multiSwitch.onTintColor = #colorLiteral(red: 0.942260921, green: 0.8732143044, blue: 0.9494530559, alpha: 1)
+                multiSwitch.isOn = false
+            }
+            
             for (label, answer) in zip (multiLabels, answers) {
                 label.text = answer.text
             }
