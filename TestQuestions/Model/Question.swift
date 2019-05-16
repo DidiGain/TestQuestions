@@ -24,11 +24,11 @@ extension Question {
                                type: .open),
                         Answer(text: "I am thinking about doing yoga right now.",
                                type: .committed),
-                        Answer(text: "I've tried it and enjoy the workout aspect of yoga.",
+                        Answer(text: "I've tried it and enjoyed the workout.",
                                type: .power)
                 ]),
             Question(text: "Do you want to incorporate spirituality into your practice?",
-                     type: .single,
+                     type: .multiple,
                      answers: [
                         Answer(text: "I want to keep it basic.",
                                type: .ruki),
@@ -40,7 +40,7 @@ extension Question {
                                type: .power)
                 ]),
             Question(text: "Do you want to hold poses or would you rather go with the flow?",
-                     type: .single,
+                     type: .ranged,
                      answers: [
                         Answer(text: "I want to hold the poses longer.",
                                type: .ruki),
@@ -64,7 +64,7 @@ extension Question {
                                type: .power)
                 ]),
             Question(text: "What does yoga mean to you?",
-                     type: .single,
+                     type: .multiple,
                      answers: [
                         Answer(text: "Breathing and stretching; a way for me to relax.",
                                type: .ruki),

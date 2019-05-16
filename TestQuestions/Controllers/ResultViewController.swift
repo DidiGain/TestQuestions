@@ -15,22 +15,38 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var yogaDescription: UILabel!
     @IBOutlet weak var stylesLabel: UILabel!
     
+    var responses: [Answer]!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.hidesBackButton = true
+        updateResult()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+// MARK: - Update UI
+extension ResultViewController {
+    func updateResult() {
+        var frequencyOfAnswers = [YogaType: Int]()
+        let responseType = responses.map { $0.type }
+        
+        for response in responseType {
+            frequencyOfAnswers[response] = (frequencyOfAnswers[response] ?? 0) + 1
+        }
+        
+        let frequencyOfAnswersSorted = frequencyOfAnswers.sorted { $0.value > $1.value }
+        guard let mostFrequentAnswer = frequencyOfAnswersSorted.first?.key else { return }
+        
+        updateUI(with: mostFrequentAnswer)
+    }
+        
+        func updateUI(with yogaType: YogaType) {
+            yogaLabel.text = "You are a - \(yogaType.rawValue)!"
+            yogaDescription.text = yogaType.descriprion
+            stylesLabel.text = yogaType.styles
+    }
+        
+    }
+

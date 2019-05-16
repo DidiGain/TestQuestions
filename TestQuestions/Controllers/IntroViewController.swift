@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroViewController: UIViewController {
 
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var mainButton: UIButton!
@@ -21,7 +21,10 @@ class ViewController: UIViewController {
        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Start", style: .plain, target: nil, action: nil)
         
         mainButton.layer.cornerRadius = 10
+    }
     
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        print(Date(), #line, #function)
     }
 
 
